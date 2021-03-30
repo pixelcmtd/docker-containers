@@ -1,5 +1,6 @@
 deps {
-        !docker buildx build --push --platform linux/arm64/v8,linux/amd64,linux/arm/v7,linux/ppc64le,linux/s390x --tag chrissx/gcc-deps:10.2 -f deps.Dockerfile .
+        !curl -LO ftp://ftp.gnu.org/gnu/binutils/binutils-2.36.1.tar.gz
+        !curl -LO ftp://ftp.gnu.org/gnu/gcc/gcc-10.2.0/gcc-10.2.0.tar.gz
 }
 
 x86_64-none-elf {
