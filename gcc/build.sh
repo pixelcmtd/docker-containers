@@ -4,6 +4,7 @@ apt upgrade -y && \
 apt install -y build-essential libgmp3-dev libmpfr-dev libisl-dev \
                libmpc-dev texinfo bison curl flex && \
 cd /usr/src/ && \
+curl -LO ftp://ftp.gnu.org/gnu/binutils/binutils-$1.tar.gz && \
 tar xzf binutils-$1.tar.gz && \
 rm -f binutils-$1.tar.gz && \
 chown -R root:root binutils-$1 && \
@@ -14,6 +15,7 @@ cd build-binutils && \
 make -j$(nproc) && \
 make install && \
 cd /usr/src/ && \
+curl -LO ftp://ftp.gnu.org/gnu/gcc/gcc-$2/gcc-$2.tar.gz && \
 tar xzf gcc-$2.tar.gz && \
 rm -f gcc-$2.tar.gz && \
 chown -R root:root gcc-$2 && \
