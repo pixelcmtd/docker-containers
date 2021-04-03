@@ -1,9 +1,9 @@
 x86_64-none-elf {
-        !docker buildx build --push --platform linux/arm64/v8,linux/amd64,linux/ppc64le,linux/s390x --tag chrissx/gcc-x86_64-none-elf:10.2 -f x86_64-none-elf.Dockerfile .
+        !docker buildx build --push --platform linux/arm64/v8,linux/amd64,linux/ppc64le --tag chrissx/gcc-x86_64-none-elf:10.2 -f x86_64-none-elf.Dockerfile .
 }
 
 aarch64-none-elf {
-        !docker buildx build --push --platform linux/arm64/v8,linux/amd64,linux/ppc64le,linux/s390x --tag chrissx/gcc-aarch64-none-elf:10.2 -f aarch64-none-elf.Dockerfile .
+        !docker buildx build --push --platform linux/arm64/v8,linux/amd64,linux/ppc64le --tag chrissx/gcc-aarch64-none-elf:10.2 -f aarch64-none-elf.Dockerfile .
 }
 
 all (x86_64-none-elf aarch64-none-elf) {}
