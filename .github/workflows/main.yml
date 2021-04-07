@@ -1,0 +1,21 @@
+name: Build and publish new containers
+
+on: [push, workflow_dispatch]
+
+jobs:
+  gcc-x86_64-none-elf:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: docker/setup-qemu-action@v1
+      - uses: docker/setup-buildx-action@v1
+      - uses: docker/login-action@v1 
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+      - uses: docker/build-push-action@v2
+        with:
+          push: true
+          context: gcc
+          file: x86_64-none-elf.Dockerfile
+          tags: chrissx/gcc-x86_64-none-elf:10.2
