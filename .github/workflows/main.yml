@@ -17,6 +17,6 @@ jobs:
         with:
           push: true
           context: gcc
-          file: x86_64-none-elf.Dockerfile
+          file: gcc/x86_64-none-elf.Dockerfile
           platforms: linux/amd64,linux/arm64,linux/ppc64le,linux/s390x,linux/arm
           tags: chrissx/gcc-x86_64-none-elf:10.2
