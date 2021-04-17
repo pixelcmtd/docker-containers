@@ -8,7 +8,6 @@ COPY torrc /etc/tor/torrc
 COPY polipo /etc/polipo/config
 
 COPY run.sh /root/run.sh
-RUN chmod +x /root/run.sh
 
 EXPOSE 9050 9052 9053
 

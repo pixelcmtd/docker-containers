@@ -18,7 +18,7 @@ jobs:
           push: true
           context: gcc
           file: gcc/x86_64-none-elf.Dockerfile
-          platforms: linux/amd64,linux/arm64,linux/ppc64le
+          platforms: linux/amd64,linux/arm64
           tags: chrissx/gcc-x86_64-none-elf:10.2
   gcc-aarch64-none-elf:
     runs-on: ubuntu-latest
@@ -35,7 +35,7 @@ jobs:
           push: true
           context: gcc
           file: gcc/aarch64-none-elf.Dockerfile
-          platforms: linux/amd64,linux/arm64,linux/ppc64le
+          platforms: linux/amd64,linux/arm64
           tags: chrissx/gcc-aarch64-none-elf:10.2
   tor-proxy:
     runs-on: ubuntu-latest
