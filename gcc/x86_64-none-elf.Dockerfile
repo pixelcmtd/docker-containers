@@ -1,7 +1,7 @@
 FROM ubuntu:latest
 
 ARG BINUTILS_VERSION=2.36.1
-ARG GCC_VERSION=10.2.0
+ARG GCC_VERSION=10.3.0
 
 RUN mkdir -p /usr/src/
 COPY build.sh /usr/src/
