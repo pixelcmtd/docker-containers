@@ -20,9 +20,7 @@ jobs:
           file: gcc/x86_64-none-elf.Dockerfile
           platforms: linux/amd64,linux/arm64
           tags: chrissx/gcc-x86_64-none-elf:10.2
-          build-args:
-            - BINUTILS_VERSION=2.36.1
-            - GCC_VERSION=10.3.0
+          build-args: BINUTILS_VERSION=2.36.1 GCC_VERSION=10.3.0
   gcc-aarch64-none-elf-10:
     runs-on: ubuntu-latest
     steps:
@@ -40,9 +38,7 @@ jobs:
           file: gcc/aarch64-none-elf.Dockerfile
           platforms: linux/amd64,linux/arm64
           tags: chrissx/gcc-aarch64-none-elf:10.2
-          build-args:
-            - BINUTILS_VERSION=2.36.1
-            - GCC_VERSION=10.3.0
+          build-args: BINUTILS_VERSION=2.36.1 GCC_VERSION=10.3.0
   gcc-x86_64-none-elf-11:
     runs-on: ubuntu-latest
     steps:
@@ -60,9 +56,7 @@ jobs:
           file: gcc/x86_64-none-elf.Dockerfile
           platforms: linux/amd64,linux/arm64
           tags: chrissx/gcc-x86_64-none-elf:11
-          build-args:
-            - BINUTILS_VERSION=2.36.1
-            - GCC_VERSION=11.1.0
+          build-args: BINUTILS_VERSION=2.36.1 GCC_VERSION=11.1.0
   gcc-aarch64-none-elf-11:
     runs-on: ubuntu-latest
     steps:
@@ -80,9 +74,7 @@ jobs:
           file: gcc/aarch64-none-elf.Dockerfile
           platforms: linux/amd64,linux/arm64
           tags: chrissx/gcc-aarch64-none-elf:11
-          build-args:
-            - BINUTILS_VERSION=2.36.1
-            - GCC_VERSION=11.1.0
+          build-args: BINUTILS_VERSION=2.36.1 GCC_VERSION=11.1.0
   tor-proxy:
     runs-on: ubuntu-latest
     steps:
