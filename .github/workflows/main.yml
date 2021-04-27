@@ -83,6 +83,7 @@ jobs:
           build-args: |
             BINUTILS=ftp://ftp.gnu.org/gnu/binutils/binutils-2.36.1.tar.xz
             GCC=https://gcc.gnu.org/pub/gcc/snapshots/11-20210426/gcc-11-20210426.tar.xz
+  #TODO: GCC 12 snapshots
   llvm:
     runs-on: ubuntu-latest
     steps:
@@ -96,6 +97,7 @@ jobs:
       - uses: docker/build-push-action@v2
         with:
           push: true
+          file: llvm.Dockerfile
           platforms: linux/amd64,linux/arm64,linux/arm,linux/ppc64le,linux/s390x
           tags: chrissx/llvm:latest
   tor-proxy:
