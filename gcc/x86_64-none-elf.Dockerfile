@@ -1,7 +1,7 @@
 FROM ubuntu:latest
 
 ARG BINUTILS="ftp://ftp.gnu.org/gnu/binutils/binutils-2.36.1.tar.xz"
-ARG GCC="ftp://ftp.gnu.org/gnu/gcc/gcc-10.3.0/gcc-10.3.0.tar.xz"
+ARG GCC="ftp://ftp.gnu.org/gnu/gcc/gcc-11.1.0/gcc-11.1.0.tar.xz"
 
 RUN mkdir -p /usr/src/
 COPY build.sh /usr/src/
