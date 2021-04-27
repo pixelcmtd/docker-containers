@@ -4,25 +4,25 @@ apt upgrade -y && \
 apt install -y build-essential libgmp3-dev libmpfr-dev libisl-dev \
                libmpc-dev texinfo bison curl flex && \
 cd /usr/src/ && \
-curl -LO ftp://ftp.gnu.org/gnu/binutils/binutils-$1.tar.gz && \
-tar xzf binutils-$1.tar.gz && \
-rm -f binutils-$1.tar.gz && \
-chown -R root:root binutils-$1 && \
-chmod -R o-w,g+w binutils-$1 && \
+curl -Lo binutils.tar.xz "$1" && \
+tar xJf binutils.tar.xz && \
+rm -f binutils.tar.xz && \
+chown -R root:root binutils-* && \
+chmod -R o-w,g+w binutils-* && \
 mkdir build-binutils && \
 cd build-binutils && \
-../binutils-$1/configure --target=$3 --prefix=/usr --program-prefix=$3- --with-sysroot --disable-nls --disable-werror && \
+../binutils-*/configure --target=$3 --prefix=/usr --program-prefix=$3- --with-sysroot --disable-nls --disable-werror && \
 make -j$(nproc) && \
 make install && \
 cd /usr/src/ && \
-curl -LO ftp://ftp.gnu.org/gnu/gcc/gcc-$2/gcc-$2.tar.gz && \
-tar xzf gcc-$2.tar.gz && \
-rm -f gcc-$2.tar.gz && \
-chown -R root:root gcc-$2 && \
-chmod -R o-w,g+w gcc-$2 && \
+curl -Lo gcc.tar.xz "$2" && \
+tar xJf gcc.tar.xz && \
+rm -f gcc.tar.xz && \
+chown -R root:root gcc-* && \
+chmod -R o-w,g+w gcc-* && \
 mkdir build-gcc && \
 cd build-gcc && \
-../gcc-$2/configure --target=$3 --prefix=/usr --program-prefix=$3- --disable-nls --enable-languages=c,c++ --without-headers && \
+../gcc-*/configure --target=$3 --prefix=/usr --program-prefix=$3- --disable-nls --enable-languages=c,c++ --without-headers && \
 make -j$(nproc) all-gcc && \
 make -j$(nproc) all-target-libgcc && \
 make install-gcc && \
