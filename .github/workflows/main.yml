@@ -97,7 +97,7 @@ jobs:
         with:
           push: true
           file: llvm.Dockerfile
-          platforms: linux/amd64,linux/arm64,linux/ppc64le,linux/s390x
+          platforms: linux/amd64,linux/arm64,linux/ppc64le
           tags: chrissx/llvm:latest
   tor-proxy:
     runs-on: ubuntu-latest
