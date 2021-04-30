@@ -3,46 +3,6 @@ name: Build and publish new containers
 on: [push, workflow_dispatch]
 
 jobs:
-  gcc-x86_64-none-elf-10:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: docker/setup-qemu-action@v1
-      - uses: docker/setup-buildx-action@v1
-      - uses: docker/login-action@v1 
-        with:
-          username: ${{ secrets.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_TOKEN }}
-      - uses: docker/build-push-action@v2
-        with:
-          push: true
-          context: gcc
-          file: gcc/x86_64-none-elf.Dockerfile
-          platforms: linux/amd64,linux/arm64
-          tags: chrissx/gcc-x86_64-none-elf:10.2
-          build-args: |
-            BINUTILS=ftp://ftp.gnu.org/gnu/binutils/binutils-2.36.1.tar.xz
-            GCC=ftp://ftp.gnu.org/gnu/gcc/gcc-10.3.0/gcc-10.3.0.tar.xz
-  gcc-aarch64-none-elf-10:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: docker/setup-qemu-action@v1
-      - uses: docker/setup-buildx-action@v1
-      - uses: docker/login-action@v1 
-        with:
-          username: ${{ secrets.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_TOKEN }}
-      - uses: docker/build-push-action@v2
-        with:
-          push: true
-          context: gcc
-          file: gcc/aarch64-none-elf.Dockerfile
-          platforms: linux/amd64,linux/arm64
-          tags: chrissx/gcc-aarch64-none-elf:10.2
-          build-args: |
-            BINUTILS=ftp://ftp.gnu.org/gnu/binutils/binutils-2.36.1.tar.xz
-            GCC=ftp://ftp.gnu.org/gnu/gcc/gcc-10.3.0/gcc-10.3.0.tar.xz
   gcc-x86_64-none-elf-11:
     runs-on: ubuntu-latest
     steps:
@@ -137,7 +97,7 @@ jobs:
         with:
           push: true
           file: llvm.Dockerfile
-          platforms: linux/amd64,linux/arm64,linux/arm,linux/ppc64le,linux/s390x
+          platforms: linux/amd64,linux/arm64,linux/ppc64le,linux/s390x
           tags: chrissx/llvm:latest
   tor-proxy:
     runs-on: ubuntu-latest
