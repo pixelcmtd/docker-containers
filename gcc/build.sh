@@ -28,7 +28,7 @@ make -j$(nproc) all-target-libgcc && \
 make install-gcc && \
 make install-target-libgcc && \
 cd /usr/src && \
-rm -rf build.sh build-binutils binutils-$1 build-gcc gcc-$2 && \
+rm -rf build.sh build-binutils binutils-* build-gcc gcc-* && \
 apt remove -y build-essential gcc make libgmp3-dev libmpfr-dev libisl-dev \
               libmpc-dev texinfo bison curl flex && \
 apt autoremove -y
