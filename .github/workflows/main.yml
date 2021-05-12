@@ -1,6 +1,8 @@
 name: Build and publish new containers
 
-on: [push, workflow_dispatch]
+on:
+  push:
+    branches: [master]
 
 jobs:
   gcc-x86_64-none-elf-11:
