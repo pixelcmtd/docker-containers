@@ -27,6 +27,5 @@ cd /usr/src/tools-* && \
 sh build_and_install && \
 cd /usr/src/ && \
 rm -rf build.sh build-* binutils-* gcc-* tools-* *.tar.?z && \
-apt remove -y build-essential gcc make libgmp3-dev libmpfr-dev libisl-dev \
-              libmpc-dev texinfo bison curl flex && \
+apt remove -y build-essential gcc make texinfo bison curl flex && \
 apt autoremove -y
