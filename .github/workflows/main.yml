@@ -64,7 +64,7 @@ jobs:
           tags: chrissx/gcc-x86_64-none-elf:12
           build-args: |
             BINUTILS=ftp://ftp.gnu.org/gnu/binutils/binutils-2.36.1.tar.xz
-            GCC=https://gcc.gnu.org/pub/gcc/snapshots/12-20210509/gcc-12-20210509.tar.xz
+            GCC=https://gcc.gnu.org/pub/gcc/snapshots/12-20210516/gcc-12-20210516.tar.xz
   gcc-aarch64-none-elf-12:
     runs-on: ubuntu-latest
     steps:
@@ -84,7 +84,7 @@ jobs:
           tags: chrissx/gcc-aarch64-none-elf:12
           build-args: |
             BINUTILS=ftp://ftp.gnu.org/gnu/binutils/binutils-2.36.1.tar.xz
-            GCC=https://gcc.gnu.org/pub/gcc/snapshots/12-20210509/gcc-12-20210509.tar.xz
+            GCC=https://gcc.gnu.org/pub/gcc/snapshots/12-20210516/gcc-12-20210516.tar.xz
   llvm:
     runs-on: ubuntu-latest
     steps:
