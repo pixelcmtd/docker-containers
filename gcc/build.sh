@@ -4,12 +4,12 @@ apt upgrade -y && \
 apt install -y build-essential libgmp3-dev libmpfr-dev libisl-dev \
                libmpc-dev texinfo bison curl flex && \
 cd /usr/src/ && \
-curl -Lo binutils.tar.xz "$1" && \
-curl -Lo gcc.tar.xz "$2" && \
-curl -Lo tools.tar.gz https://github.com/chrissxYT/tools/archive/refs/heads/master.tar.gz && \
-tar xJf binutils.tar.xz && \
-tar xJf gcc.tar.xz && \
-tar xzf tools.tar.gz && \
+curl -Lo binutils "$1" && \
+curl -Lo gcc "$2" && \
+curl -Lo tools https://github.com/chrissxYT/tools/archive/refs/heads/master.tar.gz && \
+tar xf binutils && \
+tar xf gcc && \
+tar xf tools && \
 chown -R root:root binutils-* gcc-* tools-* && \
 chmod -R o-w,g+w binutils-* gcc-* tools-* && \
 mkdir build-binutils build-gcc && \
@@ -26,6 +26,6 @@ make install-target-libgcc && \
 cd /usr/src/tools-* && \
 sh build_and_install && \
 cd /usr/src/ && \
-rm -rf build.sh build-* binutils-* gcc-* tools-* *.tar.?z && \
+rm -rf build.sh build-* binutils-* gcc-* tools-* binutils gcc tools && \
 apt remove -y build-essential gcc make texinfo bison curl flex && \
 apt autoremove -y
