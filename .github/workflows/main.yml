@@ -61,7 +61,7 @@ jobs:
           platforms: linux/amd64,linux/arm64
           tags: chrissx/gcc-x86_64-none-elf:12
           build-args: |
-            GCC=https://gcc.gnu.org/pub/gcc/snapshots/12-20211031/gcc-12-20211031.tar.xz
+            GCC=https://gcc.gnu.org/pub/gcc/snapshots/12-20220116/gcc-12-20220116.tar.xz
   gcc-aarch64-none-elf-12:
     runs-on: ubuntu-latest
     steps:
@@ -80,7 +80,7 @@ jobs:
           platforms: linux/amd64,linux/arm64
           tags: chrissx/gcc-aarch64-none-elf:12
           build-args: |
-            GCC=https://gcc.gnu.org/pub/gcc/snapshots/12-20211031/gcc-12-20211031.tar.xz
+            GCC=https://gcc.gnu.org/pub/gcc/snapshots/12-20220116/gcc-12-20220116.tar.xz
   gcc-x86_64-none-elf-trunk:
     runs-on: ubuntu-latest
     steps:
