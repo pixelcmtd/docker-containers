@@ -1,7 +1,0 @@
-run {
-        !docker run -p 9090:9090 -dv $PWD/generic:/etc/prometheus chrissx/prometheus:latest
-}
-
-test {
-        !docker run -p 9090:9090 -itv $PWD/test:/etc/prometheus chrissx/prometheus:latest
-}
