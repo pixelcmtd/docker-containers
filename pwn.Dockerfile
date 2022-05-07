@@ -5,4 +5,4 @@ ENV DEBIAN_FRONTEND=noninteractive
 RUN yes | unminimize && \
     apt update && \
     apt upgrade -y && \
-    apt install -y build-essential gcc make g++ clang clang-format llvm lldb nmap nikto wireshark openjdk-8-jdk openjdk-16-jdk gdb vim curl wget golang rustc bear
+    apt install -y build-essential gcc make g++ clang clang-format llvm lldb nmap nikto wireshark openjdk-8-jdk openjdk-18-jdk gdb vim curl wget golang rustc bear
