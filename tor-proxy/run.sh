@@ -1,17 +1,16 @@
-#!/bin/bash
+#!/bin/sh
+set -uxe
 
-# hack, but it works
-{ sleep 3 ; polipo ; } &
 tor &
+sleep 3
+polipo &
 
 while true ; do
 
 sleep 300
 
-cat << 'EOF' | nc localhost 9051
-authenticate ""
+echo 'authenticate ""
 signal newnym
-quit
-EOF
+quit' | nc localhost 9051
 
 done
