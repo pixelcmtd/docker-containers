@@ -23,7 +23,7 @@ jobs:
           platforms: linux/amd64,linux/arm64
           tags: chrissx/gcc-x86_64-none-elf:11
           build-args: |
-            GCC=ftp://ftp.gnu.org/gnu/gcc/gcc-11.3.0/gcc-11.3.0.tar.xz
+            GCC=ftp://ftp.gnu.org/gnu/gcc/gcc-11.5.0/gcc-11.5.0.tar.xz
             TARGET=x86_64-none-elf
   gcc-aarch64-none-elf-11:
     runs-on: ubuntu-latest
@@ -43,7 +43,7 @@ jobs:
           platforms: linux/amd64,linux/arm64
           tags: chrissx/gcc-aarch64-none-elf:11
           build-args: |
-            GCC=ftp://ftp.gnu.org/gnu/gcc/gcc-11.3.0/gcc-11.3.0.tar.xz
+            GCC=ftp://ftp.gnu.org/gnu/gcc/gcc-11.5.0/gcc-11.5.0.tar.xz
             TARGET=aarch64-none-elf
   gcc-arm-linux-gnueabihf-11:
     runs-on: ubuntu-latest
@@ -63,7 +63,7 @@ jobs:
           platforms: linux/amd64,linux/arm64
           tags: chrissx/gcc-arm-linux-gnueabihf:11
           build-args: |
-            GCC=ftp://ftp.gnu.org/gnu/gcc/gcc-11.3.0/gcc-11.3.0.tar.xz
+            GCC=ftp://ftp.gnu.org/gnu/gcc/gcc-11.5.0/gcc-11.5.0.tar.xz
             TARGET=arm-linux-gnueabihf
   gcc-x86_64-none-elf-12:
     runs-on: ubuntu-latest
