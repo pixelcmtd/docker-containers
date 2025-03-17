@@ -162,7 +162,7 @@ jobs:
           platforms: linux/amd64,linux/arm64
           tags: chrissx/gcc-x86_64-none-elf:14
           build-args: |
-            GCC=ftp://ftp.gnu.org/gnu/gcc/gcc-14.1.0/gcc-14.1.0.tar.xz
+            GCC=ftp://ftp.gnu.org/gnu/gcc/gcc-14.2.0/gcc-14.2.0.tar.xz
             TARGET=x86_64-none-elf
   gcc-aarch64-none-elf-14:
     runs-on: ubuntu-latest
@@ -182,7 +182,7 @@ jobs:
           platforms: linux/amd64,linux/arm64
           tags: chrissx/gcc-aarch64-none-elf:14
           build-args: |
-            GCC=ftp://ftp.gnu.org/gnu/gcc/gcc-14.1.0/gcc-14.1.0.tar.xz
+            GCC=ftp://ftp.gnu.org/gnu/gcc/gcc-14.2.0/gcc-14.2.0.tar.xz
   gcc-x86_64-none-elf-trunk:
     runs-on: ubuntu-latest
     steps:
