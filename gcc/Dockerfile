@@ -1,6 +1,6 @@
 FROM ubuntu:latest
 
-ARG BINUTILS="ftp://ftp.gnu.org/gnu/binutils/binutils-2.42.tar.xz"
+ARG BINUTILS="ftp://ftp.gnu.org/gnu/binutils/binutils-2.44.tar.xz"
 ARG GCC="ftp://ftp.gnu.org/gnu/gcc/gcc-11.5.0/gcc-11.5.0.tar.xz"
 ARG TARGET=aarch64-none-elf
 
