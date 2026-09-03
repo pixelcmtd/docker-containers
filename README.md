@@ -3,12 +3,12 @@
 Sources for some of the Docker images I maintain.
 
 > [!WARNING]
-> The `prometheus` image is deprecated, unmaintained and archived.
-> Use [`ubuntu/prometheus`](https://hub.docker.com/r/ubuntu/prometheus) instead.
+> The `prometheus` image is deprecated, unmaintained and archived. Use
+> [`ubuntu/prometheus`](https://hub.docker.com/r/ubuntu/prometheus) instead.
 
-| Tag                  | Base           | Software                                          |
-| -------------------- | -------------- | ------------------------------------------------- |
-| gcc-aarch64-none-elf | ubuntu:latest  | GNU `binutils` and GCC for `aarch64-none-elf`     |
-| gcc-x86\_64-none-elf | ubuntu:latest  | GNU `binutils` and GCC for `x86_64-none-elf`      |
-| tor-proxy            | ubuntu:18.04   | `tor` + `polipo` = SOCKSv5 and HTTP proxy for TOR |
-| llvm                 | ubuntu:rolling | `llvm`, `clang`, `lld`, `lldb`, ...               |
+| Tag                  | Base                       | Software                                          |
+| -------------------- | -------------------------- | ------------------------------------------------- |
+| gcc-aarch64-none-elf | ubuntu:latest              | GNU `binutils` and GCC for `aarch64-none-elf`     |
+| gcc-x86\_64-none-elf | ubuntu:latest              | GNU `binutils` and GCC for `x86_64-none-elf`      |
+| tor-proxy            | ubuntu:18.04               | `tor` + `polipo` = SOCKSv5 and HTTP proxy for TOR |
+| llvm                 | phusion/baseimage:resolute | `llvm`, `clang`, `lld`, `lldb`, ...               |
