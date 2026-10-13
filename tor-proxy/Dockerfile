@@ -1,11 +1,11 @@
-FROM ubuntu:18.04
+FROM ubuntu:26.04
 
-RUN apt update
-RUN apt upgrade -y
-RUN apt install -y tor polipo netcat
+RUN apt-get update \
+ && apt-get install -y --no-install-recommends tor privoxy netcat-openbsd \
+ && rm -rf /var/lib/apt/lists/*
 
 COPY torrc /etc/tor/torrc
-COPY polipo /etc/polipo/config
+COPY privoxy /etc/privoxy/config
 
 COPY run.sh /root/run.sh
 

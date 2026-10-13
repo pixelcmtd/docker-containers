@@ -1,0 +1,4 @@
+confdir /etc/privoxy
+logdir /var/log/privoxy
+listen-address 0.0.0.0:9052
+forward-socks5t / 127.0.0.1:9050 .
