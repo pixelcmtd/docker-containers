@@ -3,7 +3,7 @@ set -uxe
 
 tor &
 sleep 3
-polipo &
+privoxy --no-daemon /etc/privoxy/config &
 
 while true ; do
 

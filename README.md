@@ -10,5 +10,5 @@ Sources for some of the Docker images I maintain.
 | -------------------- | -------------------------- | ------------------------------------------------- |
 | gcc-aarch64-none-elf | ubuntu:latest              | GNU `binutils` and GCC for `aarch64-none-elf`     |
 | gcc-x86\_64-none-elf | ubuntu:latest              | GNU `binutils` and GCC for `x86_64-none-elf`      |
-| tor-proxy            | ubuntu:18.04               | `tor` + `polipo` = SOCKSv5 and HTTP proxy for TOR |
+| tor-proxy            | ubuntu:26.04               | `tor` + `privoxy` = SOCKSv5 and HTTP proxy for TOR |
 | llvm                 | phusion/baseimage:resolute | `llvm`, `clang`, `lld`, `lldb`, ...               |
